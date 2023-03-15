@@ -1,0 +1,116 @@
+body {
+	margin: 0;
+	padding: 0;
+    	background-color: #000000;
+    	box-sizing: border-box;
+}
+
+.sometext {
+	font-family: Tahoma;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+    	color: Blue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 50vh;     
+}
+
+@media (max-width: 780px) {
+    .sometext {
+	font-size: 1.2rem;
+	color: rgb(150, 20, 200);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 50vh; 
+    }
+}
+.mydiv {
+	position: relative;
+	margin: 10% auto 0;
+	width: 70%;
+	height: 200px;
+    	background: linear-gradient(90deg, #000000, #000000); 
+}
+
+h1:before {
+	content: '';
+	animation: changingTxt 30s linear infinite;
+}
+
+@keyframes changingTxt {
+	0% {
+		content: 'in ogni momento';
+	}
+	5% {
+		content: 'penso a te,';
+	}
+	10% {
+		content: 'alla persona';
+	}
+	15% {
+		content: 'meravigliosa';
+	}
+	20% {
+		content: 'che sei e';
+	}
+	25% {
+		content: 'a quanto';
+	}
+	30% {
+		content: 'mi rende';
+	}
+	35% {
+		content: 'felice';
+	}
+	40% {
+		content: 'stare';
+	}
+	45% {
+		content: 'con te.';
+	}
+	50% {
+		content: 'ti amo';
+	}
+	55% {
+		content: 'xiomara.';
+	}
+	60% {
+		content: 'ti amo♥.';
+		}
+}
+
+.animate-bg:before, .animate-bg:after {
+	content: '';
+	position: absolute;
+	left: -8px;
+	top: -8px;
+	background: linear-gradient(120deg, #00d2ff, #003256, #5bbeff,#013c63,  
+	#097dca, #70c6ff,#003256, #5bbeff,#003256, #00d2ff);
+	background-size: 300%;
+	width: calc(100% + 16px);
+	height: calc(100% + 16px);
+	z-index: -1;
+	animation: BGgradient 5s ease infinite; 
+}
+
+@keyframes BGgradient {
+	0% {
+		background-position: 0% 200%;
+	}
+	50% {
+		background-position: 200% 0%;
+	}
+	100% {
+		background-position: 0% 330%;
+	}
+}
+
+.animate-bg:after {
+	filter: brightness(1.4);
+	filter: drop-shadow(16px 16px 20px rgb(248, 220, 97));
+	filter: blur(15px);
+}
